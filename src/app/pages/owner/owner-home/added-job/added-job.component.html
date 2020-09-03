@@ -1,0 +1,74 @@
+
+
+<div class="row mt-4">
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-10">
+
+        <div class="mb-3 font-weight-bold text-center">YOUR JOBS</div><br>
+        <div #processStatus class="text-center">Processing...</div>
+        <div  *ngFor="let data of dataArray; let i=index">
+        <div class="table-responsive" *ngIf="dataArray.length != 0">
+
+
+            <div class="card text-center"  >
+                <div class="card-header">{{data.jobtitle}}</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{data.jobtype}}</h5>
+                    <p class="card-text">{{data.jobdesc}}</p>
+                    <a href="#" class="btn btn-primary">Know more</a>
+                </div>
+                <div class="card-footer text-muted">2 days ago</div>
+            
+
+
+
+
+
+
+            <table class="table table-hover table-sm table-bordered text-center">
+
+                <thead class="bg-light">
+                    <tr>
+                        <th class="font-weight-bold">S.No</th>
+                        <th class="font-weight-bold">Job Title</th>
+                        <th class="font-weight-bold">Job Type</th>
+                        <th class="font-weight-bold">Experience</th>
+                        <th class="font-weight-bold">Salary</th>
+                        <th class="font-weight-bold">Location</th>
+                        <th class="font-weight-bold">Industry</th>
+                        <th class="font-weight-bold"> function</th>
+                        <th class="font-weight-bold">Apply link</th>
+                        <th class="font-weight-bold">Status</th>
+                        <th class="font-weight-bold">Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr >
+                        <td>{{i+1}}</td>
+                        <td>{{data.jobtitle}}</td>
+                        <td>{{data.jobtype}}</td>
+                        <td>{{data.experience}}</td>
+                        <td>{{data.salary}}</td>
+                        <td>{{data.location}}</td>
+                        <td>{{data.industry}}</td>
+                        <td>{{data.func}}</td>
+                        <td>{{data.applylink}}</td>
+                        <td>{{data.status}}</td>
+                                           <td><button class="btn-primary" (click)="deletedata(data)()">Delete</button></td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div><br>
+    </div>
+
+    <div class="col-md-1"></div>
+
+</div><br>
+
+</div>
